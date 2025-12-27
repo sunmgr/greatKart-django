@@ -130,6 +130,15 @@ STATICFILES_DIRS = [
     BASE_DIR / 'greatkart' / 'static',
 ]
 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR:'danger',
+}
+
+
+
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -139,3 +148,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#smtp configuration
+
+EMAIL_HOST ='smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'magarsunash005@gmail.com'
+EMAIL_HOST_PASSWORD = 'hellking123'
+EMAIL_USE_TLS = True
